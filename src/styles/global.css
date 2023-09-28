@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(129, 193, 158);
+    --second-color: #15151f;
+    --text-color: rgb(185, 185, 185);
+    --input-focus-color: rgba(151, 215, 172, 0.313);
+}
+
+body, input, button {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: linear-gradient(145deg,rgb(21, 21, 28), rgb(39, 39, 57));
+}
