@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Card } from "../../components/Card";
+import { NavBar } from "../../components/NavBar";
+import logoImage from "./assets/logo.svg";
 
 export function Home() {
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState([]);
   const [nextId, setNextId] = useState(1);
-  const [user, setUser] = useState({name:'', avatar:''})
+  const [user, setUser] = useState({ name: "", avatar: "" });
 
   function handleAddStudent() {
     const newStudent = {
@@ -22,28 +24,27 @@ export function Home() {
     setStudents((prevState) => [...prevState, newStudent]);
     setNextId(nextId + 1);
   }
-  
+
   useEffect(() => {
-    fetch('https://api.github.com/users/cailopinheiro')
-    .then(response => response.json())
-    .then(data => {
-      setUser({
-        name: data.name,
-        avatar: data.avatar_url,
-      })
-    })
-  }, []); 
+    fetch("https://api.github.com/users/cailopinheiro")
+      .then((response) => response.json())
+      .then((data) => {
+        setUser({
+          name: data.name,
+          avatar: data.avatar_url,
+        });
+      });
+  }, []);
 
   return (
     <div className="container">
       <header>
-        <h1>Lista de Nomes</h1>
-        <div className="perfil">
-          <strong>{user.name}</strong>
-          <img
-            src={user.avatar}
-            alt="foto de perfil"
-          />
+        <div id="sub-header">
+          <h1>Lista de Nomes</h1>
+          <div className="perfil">
+            <strong>{user.name}</strong>
+            <img src={user.avatar} alt="foto de perfil" />
+          </div>
         </div>
       </header>
 

@@ -1,19 +1,39 @@
+.containerRouter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerRouter img {
+    width: 100px;
+}
+
 .container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    min-height: 100vh;
+    height: fit-content;
+    min-height: 847px;
 }
 
 .container header  {
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    flex-direction: column;
+}
+
+#sub-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 84px 0 24px;
+    margin: calc(84px/2) 0 24px;
     color: var(--main-color);
-    width: 50%;
+    width: 100%;
     max-width: 600px;
+    flex-direction: row;
 }
 
 .container input {

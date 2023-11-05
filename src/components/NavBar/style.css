@@ -1,0 +1,43 @@
+
+.nav {
+    width: 100%;
+    max-width: 600px;
+    margin-top: calc(84px/3);
+    background: #ffffff08;
+    padding: 15px 24px;
+    border-radius: 5px;
+}
+
+.nav .nav-list {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav .nav-list a {
+    display: flex;
+    align-items: stretch;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.nav .nav-list .pages {
+    display: flex;
+    gap: 20px;
+    font-size: 0.8rem;
+}
+
+.container header .nav img {
+    width: 100px;
+    height: fit-content;
+}
